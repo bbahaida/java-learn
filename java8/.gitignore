@@ -1,3 +1,11 @@
+### Intellij ###
 
-############## class bytecode ##################
+.idea/*
+
+### Maven ###
+
+target/*
+
+### Java ####
+
 *.class

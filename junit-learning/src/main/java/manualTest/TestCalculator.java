@@ -20,7 +20,7 @@ public class TestCalculator {
             throw new RuntimeException("There were "+testCalculator.nbErrors+" error(s)" );
         }*/
 
-        System.out.print(testCalculator.pyramid(5));
+        testCalculator.fizzBuzz();
 
     }
 
@@ -61,6 +61,21 @@ public class TestCalculator {
         return result;
     }
 
+    public void fizzBuzz(){
+        for (int i = 1; i <= 100; i++){
+            if(i%10 == 0)
+                System.out.println();
+            if(i%3 == 0 && i%5==0) {
+                System.out.print("FizzBuzz\t");
+            }else if(i%5==0){
+                System.out.print("Buzz\t");
+            }else if(i%3 == 0){
+                System.out.print("Fizz\t");
+            }else {
+                System.out.print(i+"\t");
+            }
+        }
+    }
     private void addTest()throws RuntimeException{
         Calculator calculator = new Calculator();
         double result = calculator.add(10,50);
@@ -70,4 +85,6 @@ public class TestCalculator {
             System.out.println("Test passed");
         }
     }
+
+
 }
